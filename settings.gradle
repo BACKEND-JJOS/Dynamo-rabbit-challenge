@@ -1,0 +1,21 @@
+rootProject.name = 'dynamo-rabbit-challenge'
+
+include ':app-service'
+project(':app-service').projectDir = file ('./application/app-service')
+
+include ':model'
+project(':model').projectDir = file ('./domain/model')
+
+include ':usecase'
+project(':usecase').projectDir = file ('./domain/usecase')
+
+include ':reactive-web'
+project(':reactive-web').projectDir = file ('./infrastructure/entry-points/reactive-web')
+
+include ':dynamo-adapter'
+project(':dynamo-adapter').projectDir = file ('./infrastructure/driven-adapters/dynamo-adapter')
+
+
+include ':rabbit-adapter'
+project(':rabbit-adapter').projectDir = file ('./infrastructure/driven-adapters/rabbit-adapter')
+
